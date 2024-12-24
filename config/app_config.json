@@ -1,0 +1,12 @@
+{
+    "appName": "Fleet Management System",
+    "version": "1.0.0",
+    "logging": {
+        "level": "INFO",
+        "file": "logs/app.log"
+    },
+    "database": {
+        "type": "SQLite",
+        "connectionString": "fleet_management.db"
+    }
+}
