@@ -120,6 +120,28 @@ If the backend requires a database, follow these steps:
    docker push <your-aws-account-id>.dkr.ecr.us-west-2.amazonaws.com/fleet-frontend:latest
    ```
 
+5. Ensure all required npm packages are listed in `package.json` under `dependencies` and `devDependencies`. Add the following if needed:
+   ```json
+   "dependencies": {
+     "react": "^19.0.0",
+     "react-dom": "^19.0.0",
+     "react-router-dom": "^7.1.1",
+     "file-saver": "^2.0.5",
+     "xlsx": "^0.18.5",
+     "webpack": "^5.97.1",
+     "webpack-cli": "^6.0.1",
+     "html-webpack-plugin": "^5.6.3"
+   },
+   "devDependencies": {
+     "babel-loader": "^9.1.2",
+     "css-loader": "^7.1.2",
+     "style-loader": "^4.0.0",
+     "@babel/core": "^7.26.0",
+     "@babel/preset-env": "^7.26.0",
+     "@babel/preset-react": "^7.26.3"
+   }
+   ```
+
 ---
 
 ## Deploying to AWS Kubernetes (EKS)
@@ -227,10 +249,10 @@ spec:
   selector:
     app: fleet-frontend
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 3000
-    type: LoadBalancer
+      - protocol: TCP
+        port: 80
+        targetPort: 3000
+      type: LoadBalancer
 ```
 
 ### 3. Deploy Manifests
