@@ -104,3 +104,24 @@ export const deleteComplianceRecord = async (id) => {
   const response = await fetch(`${BASE_URL}/compliance-records/${id}`, { method: 'DELETE' });
   return response.json();
 };
+
+export const fetchDashboardMetrics = async () => {
+  const response = await fetch(`${BASE_URL}/dashboard-metrics`);
+  return response.json();
+};
+//login page
+export const login = async (credentials) => {
+  const response = await fetch(`${BASE_URL}/login`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(credentials),
+  });
+  if (!response.ok) throw new Error('Login failed');
+  return response.json();
+};
+//report
+export const fetchReportData = async () => {
+  const response = await fetch(`${BASE_URL}/reports`);
+  return response.json();
+};
+

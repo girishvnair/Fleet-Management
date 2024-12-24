@@ -6,3 +6,4 @@
 "*.dll" 
 ".vscode/" 
 ".idea/" 
+node_modules/

@@ -8,21 +8,23 @@ import TripsList from './components/Trips/TripsList';
 import FuelLogs from './components/FuelLogs/FuelLogs';
 import MaintenanceLogs from './components/MaintenanceLogs/MaintenanceLogs';
 import ComplianceRecords from './components/Compliance/ComplianceRecords';
+import Dashboard from './components/Dashboard/Dashboard';
 
 
 const App = () => {
   return (
     <Router>
-    <nav>
-      <Link to="/">Home</Link> |
-      <Link to="/login">Login</Link> |
-      <Link to="/reports">Reports</Link> |
-      <Link to="/vehicles">Vehicles</Link> |
-      <Link to="/trips">Trips</Link> |
-      <Link to="/fuel-logs">Fuel Logs</Link> |
-      <Link to="/maintenance">Maintenance Logs</Link> |
-      <Link to="/compliance">Compliance Records</Link>
-    </nav>
+      <nav>
+        <Link to="/">Home</Link> |
+        <Link to="/dashboard">Dashboard</Link> |
+        <Link to="/login">Login</Link> |
+        <Link to="/reports">Reports</Link> |
+        <Link to="/vehicles">Vehicles</Link> |
+        <Link to="/trips">Trips</Link> |
+        <Link to="/fuel-logs">Fuel Logs</Link> |
+        <Link to="/maintenance">Maintenance Logs</Link> |
+        <Link to="/compliance">Compliance Records</Link>
+      </nav>
 
     <Routes>
       <Route path="/" element={<HomePage />} />
@@ -33,6 +35,7 @@ const App = () => {
       <Route path="/fuel-logs" element={<FuelLogs />} />
       <Route path="/maintenance" element={<MaintenanceLogs />} />
       <Route path="/compliance" element={<ComplianceRecords />} />
+      <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
 
     </Router>
