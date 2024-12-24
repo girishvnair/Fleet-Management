@@ -4,6 +4,71 @@ A comprehensive fleet management application with frontend and backend component
 
 ---
 
+## Features
+
+### Core Features:
+1. **User Management**:
+   - Add, authenticate, and remove users.
+
+2. **Vehicle Management**:
+   - Add new vehicles with attributes like license plate, make, model, year, and status.
+   - Update the status of vehicles (e.g., Available, In Maintenance, In Use).
+   - Retrieve a list of all vehicles.
+
+3. **Trip Management**:
+   - Start and end trips with information such as vehicle ID, user ID, start and end times, and locations.
+   - Retrieve all trips, including their details.
+
+4. **Fuel Log Management**:
+   - Add fuel logs with details like vehicle ID, date, fuel amount, and cost.
+   - Retrieve all fuel logs or logs for a specific vehicle.
+
+5. **Maintenance Log Management**:
+   - Add maintenance logs with attributes like vehicle ID, date, and description.
+   - Retrieve maintenance logs for a specific vehicle or all logs.
+
+6. **Compliance Records Management**:
+   - Add compliance records with details like type (e.g., Inspection, Certification), date, and description.
+   - Retrieve compliance records for specific vehicles or all compliance records.
+
+7. **Dashboard Metrics** (Frontend Feature):
+   - Provides a summary view with metrics like active vehicles, completed trips, ongoing trips, fuel consumption, and maintenance alerts.
+
+### Frontend Features:
+1. **React-Based UI**:
+   - User-friendly interfaces for managing vehicles, trips, fuel logs, maintenance logs, and compliance records.
+   - Navigation through pages like Dashboard, Reports, Vehicles, and Trips.
+
+2. **Data Interaction**:
+   - Ability to add, edit, delete, and view records via forms and tables.
+
+3. **Reports**:
+   - Generate and download reports in PDF and Excel formats.
+
+4. **Authentication**:
+   - Basic login functionality.
+
+### Backend Features:
+1. **Database Integration**:
+   - Uses SQLite for data storage.
+   - Structured database schema for users, vehicles, trips, fuel logs, maintenance logs, and compliance records.
+
+2. **API Endpoints**:
+   - RESTful API for communication between the frontend and backend.
+
+3. **Logging**:
+   - Centralized logging mechanism using a Logger class.
+
+4. **Configuration Management**:
+   - Configuration handled via JSON files for settings like database connection and logging levels.
+
+5. **Unit Testing**:
+   - Unit tests for core managers like `VehicleManager`, `FuelLogManager`, `MaintenanceLogManager`, `ComplianceManager`, `TripManager`, and `UserManager`.
+
+---
+
+---
+
 ## Prerequisites
 
 1. **AWS CLI Installed**  
