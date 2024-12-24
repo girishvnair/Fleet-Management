@@ -1,10 +1,18 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
+import ReportsPage from './pages/ReportsPage';
 
 const App = () => {
   return (
-    <div>
-      <h1>Welcome to Fleet Management</h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/reports" element={<ReportsPage />} />
+      </Routes>
+    </Router>
   );
 };
 
